@@ -1,0 +1,81 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+/* nav-bar **************************************************/
+/* nav-bar **************************************************/
+/* nav-bar **************************************************/
+.home-icon{
+    width: 1.7rem;
+    display: block;
+    transition: .2s;
+}
+.home-icon:hover{
+    transform: scale(1.1);
+}
+.nav-wrapper{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #d8d8d8;
+}
+.nav{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.list-wrapper{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.list-wrapper li{
+    cursor: pointer;
+    padding: .5rem 1rem;
+    transition: .2s;
+    font-weight: 400;
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-thickness: .2rem;
+    text-decoration-color: white;
+}
+.list-wrapper li:hover{
+    text-decoration-color: #82A0AA;
+}
+
+/* greeting **************************************************/
+/* greeting **************************************************/
+/* greeting **************************************************/
+.greeting-wrapper{
+    font-weight: 300;
+    font-size: 1.5rem;
+    width: 80%;
+    margin: auto;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+.greeting-wrapper p{
+    line-height: 2.5rem;
+}
+
+
+.wave {
+    animation-name: wave-animation;  
+    animation-duration: 2s;        
+    animation-iteration-count: infinite; 
+    transform-origin: 80% 80%;
+    display: inline-block;
+} 
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+    10% { transform: rotate(14.0deg) }  
+    20% { transform: rotate(-8.0deg) }
+    30% { transform: rotate(14.0deg) }
+    40% { transform: rotate(-4.0deg) }
+    50% { transform: rotate(10.0deg) }
+    60% { transform: rotate( 0.0deg) }  
+    100% { transform: rotate( 0.0deg) }
+}
