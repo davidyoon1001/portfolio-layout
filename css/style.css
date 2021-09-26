@@ -1,6 +1,43 @@
 body{
     font-family: 'Roboto', sans-serif;
+    /* background-color: #A3CFCD; */
+    /* position: relative; */
 }
+/* div{
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px 8px;
+}
+#page1{
+    width: 90%;
+    left: -5%;
+    right: 0;
+    margin: auto;
+    margin-top: 2rem;
+    z-index: 1;
+}
+#page2{
+    border: 2px solid white;
+    width: 30%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 5rem;
+    z-index: 1;
+}
+#page3{
+    width: 70%;
+    left: 0;
+    right: -15%;
+    margin: auto;
+    margin-top: 11rem;
+    z-index: 5;
+}
+div img{
+    display: block;
+    height: auto;
+    max-width: 100%;
+} */
+
 
 /* nav-bar **************************************************/
 /* nav-bar **************************************************/
@@ -35,15 +72,35 @@ body{
 .list-wrapper li{
     cursor: pointer;
     padding: .5rem 1rem;
-    transition: .2s;
     font-weight: 400;
-    text-decoration: underline;
-    text-underline-position: under;
-    text-decoration-thickness: .2rem;
-    text-decoration-color: white;
+    position: relative;
+    transition: .5s;
 }
-.list-wrapper li:hover{
-    text-decoration-color: #82A0AA;
+.list-wrapper li::after {
+    content: '';
+    display: block;
+    width: 70%;
+    height: .2rem;
+    position: absolute;
+    bottom: .1rem;
+    left: 0;
+    right: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #82A0AA;
+    
+}
+.list-wrapper li:hover::after{
+    right: 0;
+    background-color: #82A0AA;
+}
+
+.list-wrapper li:hover::after{
+    animation: underline-animate .2s;
+    animation-iteration-count: 1;
+}
+.list-wrapper li::after:hover{
+    background:  red;
 }
 
 /* greeting **************************************************/
@@ -78,4 +135,33 @@ body{
     50% { transform: rotate(10.0deg) }
     60% { transform: rotate( 0.0deg) }  
     100% { transform: rotate( 0.0deg) }
+}
+
+/* works ******************************************************/
+/* works ******************************************************/
+/* works ******************************************************/
+
+.works-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+    border: 1px solid black;
+    justify-content: start;
+    gap: 1.85rem;
+}
+.work-content-wrapper{
+    width: calc(33% - 1rem);
+    border: 1px solid black;
+}
+.work-content-wrapper{
+    position: relative;
+}
+.content-img-wrapper img{
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
 }
